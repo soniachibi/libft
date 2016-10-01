@@ -6,7 +6,7 @@
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 08:50:44 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/01 09:54:51 by schibi           ###   ########.fr       */
+/*   Updated: 2016/10/01 11:46:00 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char *ft_strncpy(char *dst, const char *src, size_t len)
 	size_t i;
 	size_t srclen;
 
+	srclen = ft_strlen(const char *src)
 	i = 0;
 
 	while (dst[i] != '\0' && src[i] != '\0' && i < len)
