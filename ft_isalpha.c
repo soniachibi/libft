@@ -1,39 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 20:37:02 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/01 16:36:27 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/01 16:49:46 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/01 23:41:50 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+int	ft_isalpha(int c)
 {
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (big[i] != '\0' && little[j] != '\0')
-	{
-		if (big[i] == little[j])
-		{
-			j++;
-			i++;
-		}
-		else
-		{
-			i -= j;
-			j = 0;
-		}
-		i++;
-	}
-	if (little[j] == '\0')
-		return ((char *)&big[i - j]);
-	return (NULL);
+	if ( c >= 'A' || 'z' >= c)
+		return(1);
+	return(0);	
 }
