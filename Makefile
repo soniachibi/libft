@@ -6,7 +6,7 @@
 #    By: schibi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/28 18:35:00 by schibi            #+#    #+#              #
-#    Updated: 2016/10/02 00:03:45 by schibi           ###   ########.fr        #
+#    Updated: 2016/10/04 09:38:00 by schibi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,12 +26,13 @@ SRC= ft_strlen.c \
 	 ft_strstr.c\
 	 ft_strcmp.c\
 	 ft_strncmp.c\
-	 ft_strcpy.c\	 
+	 ft_strcpy.c\
 	 ft_strncpy.c\
 	 ft_isalpha.c\
      ft_isdigit.c\
 	 ft_isalnum.c\
 	 ft_isprint.c\
+	 ft_strdup.c\
 OBJ= $(SRC: .c=.o)
 
 $(NAME):

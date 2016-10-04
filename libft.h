@@ -6,7 +6,7 @@
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 23:57:52 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/02 00:03:03 by schibi           ###   ########.fr       */
+/*   Updated: 2016/10/04 09:37:20 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char *ft_strncpy(char *dst, const char *src, size_t len);
 int	ft_isalpha(int	c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
-int isprint(int c);
+int ft_isprint(int c);
+char *ft_strdup(const char *s1); 
 #endif
