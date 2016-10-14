@@ -6,12 +6,11 @@
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/14 00:06:42 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/14 01:35:31 by schibi           ###   ########.fr       */
+/*   Updated: 2016/10/14 01:47:46 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
@@ -29,12 +28,4 @@ void *ft_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return(NULL);
-}
-
-int main(void)
-{
-	unsigned char s[] = "Magnifique";
-    
-	printf("%s", ft_memchr(s, 'f', 8));
-	printf("%s", memchr(s, 'f', 8));
 }
