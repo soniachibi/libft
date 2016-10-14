@@ -6,7 +6,7 @@
 #    By: schibi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/28 18:35:00 by schibi            #+#    #+#              #
-#    Updated: 2016/10/04 09:38:00 by schibi           ###   ########.fr        #
+#    Updated: 2016/10/14 00:03:15 by schibi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,25 +32,33 @@ SRC= ft_strlen.c \
      ft_isdigit.c\
 	 ft_isalnum.c\
 	 ft_isprint.c\
-	 ft_strdup.c\
-OBJ= $(SRC: .c=.o)
+	 ft_memset.c\
+	 ft_bzero.c\
+     ft_memcpy.c\
+     ft_memccpy.c\
+     ft_memrevcpy.c\
+	 ft_memmove.c\
+	 ft_memchr.c\
+	#ft_memcmp.c\
+
+OBJ= $(SRC:.c=.o)
 
 $(NAME):
 	@ $(CC) $(CFLAGS) -I libft.h -c $(SRC)
 	@ ar rc $(NAME) $(OBJ)
+	@ ranlib $(NAME)
 	@ echo "\033[32m\nLibft created!\033[0m"
 
 all: $(NAME)
 
 clean:
-	@ $(RM) $(OBJ)
-	@ echo "033[33mLibft object deleted!\033[0m"
+	@ $(RM) *.o
+	@ echo "033[33m\nLibft object deleted!\033[0m"
 
 fclean: clean
 	@ $(RM) $(NAME)
-	@ echo "\033[31mLibft deleted!\033[0m"
+	@ echo "\033[31m\nLibft deleted!\033[0m"
 
 re: fclean all
 
 .PHONY: all re clean fclean
-

@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memrevcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/30 00:44:21 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/12 01:52:11 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/11 23:35:13 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/12 01:24:25 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-int			ft_strcmp(const char *s1, const char *s2)
-{
-	int i;
 
-	i = 0;
-	while ((s1[i] != 0 && s2[i] != 0) && (s1[i] == s2[i])) 
-			i++;
-		return (s1[i] - s2[i]);
-	return(0);
+void		*ft_memrevcpy(void *dst, const void *src, size_t n)
+{
+	unsigned char *ptr1;
+	unsigned char *ptr2;
+
+	ptr1 = (unsigned char *)dst + (n - 1);
+	ptr2 = (unsigned char *)src + (n - 1);
+	while(n)
+	{
+		*ptr1 = *ptr2;
+		--ptr1;
+		--ptr2;
+		--n;
+	}
+	return(dst);
 }
