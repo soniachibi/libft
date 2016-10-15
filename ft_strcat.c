@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/04 18:04:47 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/14 17:51:37 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/14 11:26:02 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/14 11:30:09 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char * ft_strcat(char *s1, const char *s2)
 {
- size_t counter;
- char	*str;
+	size_t	length;
+	char	*ptr;
 
- counter = ft_strlen(s1);
- str = (char *)malloc((counter + 1) * sizeof(char));
-		if (str != NULL)
-			return (ft_memmove(str, s1, (counter + 1) * sizeof(char)));
-		return (NULL);
+	ptr = ft_strlen(s1) + s1;
+	length = ft_strlen(s2) + 1;
+	ft_memcpy(ptr, s2, length);
+	ptr += length - 1;
+	*ptr = 0;
+	return (s1);
 }

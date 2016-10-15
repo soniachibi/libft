@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/01 08:50:44 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/01 16:38:41 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/14 19:24:02 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/14 20:05:00 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,23 @@
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t i;
-	size_t srclen;
+	char *str;
 
-	srclen = ft_strlen(src);
 	i = 0;
-	while (dst[i] != '\0' && src[i] != '\0' && i < len)
+	str = dst;
+
+	while ( i < len)
 	{
-		if (i <= srclen)
-			dst[i] = src[i];
+		if(src[i] != '\0')
+			str[i] = src[i];
 		else
-			dst[i] = '\0';
+		{
+			while(i < len)
+			{		
+				str[i] = '\0';
+				i++;
+			}	
+		}	
 		i++;
 	}
 	return (dst);

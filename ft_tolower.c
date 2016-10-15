@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/04 18:04:47 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/14 17:51:37 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/14 11:19:23 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/14 11:20:18 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+int ft_tolower(int c)
 {
- size_t counter;
- char	*str;
-
- counter = ft_strlen(s1);
- str = (char *)malloc((counter + 1) * sizeof(char));
-		if (str != NULL)
-			return (ft_memmove(str, s1, (counter + 1) * sizeof(char)));
-		return (NULL);
+	if (c >= 'A' && c <= 'Z')
+				return (c - 'A' + 'a');
+		return (c);
 }

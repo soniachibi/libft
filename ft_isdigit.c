@@ -6,15 +6,23 @@
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 23:31:28 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/01 23:38:53 by schibi           ###   ########.fr       */
+/*   Updated: 2016/10/14 02:53:48 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' || '9' >= c)
+	if (c > 47  && c < 58)
 		return(1);
-	return(0);
+	else
+		return(0);
+}
+
+int main(void)
+{
+	printf("%d", ft_isdigit('j'));
+			return(0);
 }
