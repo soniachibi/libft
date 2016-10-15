@@ -6,7 +6,7 @@
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 20:37:02 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/01 16:36:27 by schibi           ###   ########.fr       */
+/*   Updated: 2016/10/15 00:29:46 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,26 @@ char	*ft_strstr(const char *big, const char *little)
 	j = 0;
 	while (big[i] != '\0' && little[j] != '\0')
 	{
-		if (big[i] == little[j])
-		{
+		
+		if(big[i] == little[j])
 			j++;
-			i++;
-		}
 		else
 		{
-			i -= j;
+			i++ ;
 			j = 0;
 		}
 		i++;
 	}
-	if (little[j] == '\0')
-		return ((char *)&big[i - j]);
-	return (NULL);
+		if(little[j] == '\0')
+			return((char*)&big[i - j]);
+	return(0);
 }
+
+/*int	main(void)
+{
+	const char big[] = "MZIRIBMZIRIBMZP";
+	const char little[] = "MZIRIBMZP";
+
+	printf("%s\n", ft_strstr(big, little));
+	printf("%s", strstr(big, little));
+}*/

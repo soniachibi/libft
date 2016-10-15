@@ -6,7 +6,7 @@
 #    By: schibi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/28 18:35:00 by schibi            #+#    #+#              #
-#    Updated: 2016/10/14 20:07:04 by schibi           ###   ########.fr        #
+#    Updated: 2016/10/14 20:14:01 by schibi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,9 +48,9 @@ SRC= ft_strlen.c\
 	 ft_strchr.c\
 	 ft_putchar.c\
 
-OBJ= $(SRC:.c=.o)
+OBJ= $(SRC:%.c=%.o)
 
-$(NAME):
+$(NAME): $(SRC)
 	@ $(CC) $(CFLAGS) -I libft.h -c $(SRC)
 	@ ar rc $(NAME) $(OBJ)
 	@ ranlib $(NAME)
@@ -59,7 +59,7 @@ $(NAME):
 all: $(NAME)
 
 clean:
-	@ $(RM) *.o
+	@ $(RM) $(OBJ)
 	@ echo "\033[33m\nLibft object deleted!\033[0m"
 
 fclean: clean
