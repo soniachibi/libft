@@ -6,7 +6,7 @@
 #    By: schibi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/28 18:35:00 by schibi            #+#    #+#              #
-#    Updated: 2016/10/15 19:32:08 by schibi           ###   ########.fr        #
+#    Updated: 2016/10/16 00:18:38 by schibi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRC= ft_strlen.c\
 	 ft_memchr.c\
 	 ft_memcmp.c\
 	 ft_strcat.c\
+	 ft_strncat.c\
 	 ft_toupper.c\
 	 ft_tolower.c\
 	 ft_strchr.c\
