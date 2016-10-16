@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 20:37:02 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/15 19:19:45 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/15 19:23:37 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/15 19:34:40 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;
-	while (big[i] != '\0' && little[j] != '\0')
+	while (big[i] != '\0' && little[j] != '\0' && i < len)
 	{
 		
 		if(big[i] == little[j])

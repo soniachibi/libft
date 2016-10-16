@@ -6,7 +6,7 @@
 #    By: schibi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/28 18:35:00 by schibi            #+#    #+#              #
-#    Updated: 2016/10/14 20:14:01 by schibi           ###   ########.fr        #
+#    Updated: 2016/10/15 19:32:08 by schibi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ LDLIBS= -lft
 
 SRC= ft_strlen.c\
 	 ft_strstr.c\
+	 ft_strnstr.c\
 	 ft_strcmp.c\
 	 ft_strncmp.c\
 	 ft_strcpy.c\
