@@ -6,7 +6,7 @@
 #    By: schibi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/28 18:35:00 by schibi            #+#    #+#              #
-#    Updated: 2016/10/16 00:46:47 by schibi           ###   ########.fr        #
+#    Updated: 2016/10/17 03:16:52 by schibi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRC= ft_strlen.c\
 	 ft_tolower.c\
 	 ft_strchr.c\
 	 ft_putchar.c\
+	 ft_putstr.c\
 
 OBJ= $(SRC:%.c=%.o)
 

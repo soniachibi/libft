@@ -43,5 +43,5 @@ int	ft_toupper(int c);
 int	ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 void	ft_putchar(char c);
-
+void	ft_putstr(char const *s);
 #endif
