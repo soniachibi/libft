@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/15 21:37:50 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/17 03:25:57 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/17 17:52:14 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/17 20:16:33 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+char	*ft_strnew(size_t size)
 {
-	char	tofind;
-	char	*ptr;
+	char *str;
 
-	tofind = (char) c;
-	ptr = NULL;
-	while(1)
-	{
-		if(*src == tofind)
-			ptr = (char *)src;
-		if(*src ++ == '\0')
-			return(ptr);
-	}
+	str = (char *)malloc(sizeof(char) *(size + 1));
+	if(str == NULL)
+		return(NULL);
+		ft_bzero(str, (size + 1));
+		return(str);
 }

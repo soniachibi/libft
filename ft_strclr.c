@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/15 21:37:50 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/17 03:25:57 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/17 20:42:30 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/17 22:43:59 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+void	ft_strclr(char *s)
 {
-	char	tofind;
-	char	*ptr;
+	int		i;
+	int		len;
 
-	tofind = (char) c;
-	ptr = NULL;
-	while(1)
+	if (s)
 	{
-		if(*src == tofind)
-			ptr = (char *)src;
-		if(*src ++ == '\0')
-			return(ptr);
+	 i = 0;
+	 len = ft_strlen(s);
+	while (i < len)
+			{
+				s[i] = '\0';
+			    i++;
+			}
 	}
 }
+

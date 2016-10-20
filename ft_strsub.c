@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/15 21:37:50 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/17 03:25:57 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/20 13:47:10 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/20 16:24:21 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	tofind;
-	char	*ptr;
+	unsigned int i;
+	char *substr;
 
-	tofind = (char) c;
-	ptr = NULL;
-	while(1)
-	{
-		if(*src == tofind)
-			ptr = (char *)src;
-		if(*src ++ == '\0')
-			return(ptr);
-	}
-}
+	i = 0;
+	substr = (char *) malloc(sizeof(char) *(len + 1));
+	if(!s || !substr)
+		return(NULL);
+	while( i != start)
+		i++;:
+
+	while(s[i] != '\0' && i < (len))
+		{
+			substr[i] = s[i];
+			i++;
+		}
+		substr[i]  = '\0';
+		return(substr);
+};

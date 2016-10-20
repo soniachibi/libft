@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/15 21:37:50 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/17 03:25:57 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/17 20:30:20 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/17 20:34:46 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+void	ft_strdel(char **as)
 {
-	char	tofind;
-	char	*ptr;
-
-	tofind = (char) c;
-	ptr = NULL;
-	while(1)
+	if(as && *as) 
 	{
-		if(*src == tofind)
-			ptr = (char *)src;
-		if(*src ++ == '\0')
-			return(ptr);
+		free(*as);
+		*as = NULL; 
 	}
 }

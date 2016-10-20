@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/15 21:37:50 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/17 03:25:57 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/20 00:38:56 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/20 00:51:54 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	char	tofind;
-	char	*ptr;
+	int i;
 
-	tofind = (char) c;
-	ptr = NULL;
-	while(1)
-	{
-		if(*src == tofind)
-			ptr = (char *)src;
-		if(*src ++ == '\0')
-			return(ptr);
-	}
+	i =0;
+	if( ft_strlen(s1) != ft_strlen(s2))
+			return(0);
+	else 
+		{	
+			while( s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+				i ++;
+			return(1);
+		}
+	return(0);
+
 }

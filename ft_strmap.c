@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schibi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/15 21:37:50 by schibi            #+#    #+#             */
-/*   Updated: 2016/10/17 03:25:57 by schibi           ###   ########.fr       */
+/*   Created: 2016/10/19 21:29:52 by schibi            #+#    #+#             */
+/*   Updated: 2016/10/19 22:45:27 by schibi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	*ft_strrchr(const char *src, int c)
+char	*ft_strmap(char const *s, char (*f) (char))
 {
-	char	tofind;
-	char	*ptr;
+	size_t i;
+	char *ptr;
 
-	tofind = (char) c;
-	ptr = NULL;
-	while(1)
-	{
-		if(*src == tofind)
-			ptr = (char *)src;
-		if(*src ++ == '\0')
-			return(ptr);
-	}
+	i = 0;
+	ptr = (char *) malloc((sizeof(char) *ft_strlen((char *)s) + 1));
+	if(!ptr)
+		return(NULL);
+	if(s && f)
+		while(i < ft_strlen((char *)s))
+		{
+			ptr[i] = f(s[i]);
+			i ++;
+		}
+		ptr[i] = '\0';
+		return(ptr);	
 }
+
